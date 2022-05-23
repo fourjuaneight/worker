@@ -15,7 +15,7 @@ jobs:
         uses: kenji-miyake/setup-git-cliff@v1
 
       - name: Generate Changelog
-        run: git cliff --output CHANGELOG.md
+        run: git cliff --output CHANGELOG.md --config cliff.toml
 
       - name: Update Changelog
         uses: stefanzweifel/git-auto-commit-action@v4
