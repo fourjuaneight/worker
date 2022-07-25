@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [unreleased]
+## [1.2.0] - 2022-07-25
 
 ### Bug Fixes
 
@@ -14,12 +14,14 @@ All notable changes to this project will be documented in this file.
 ### Features
 
 - [Add link to commit on changelog.](https://github.com/fourjuaneight/worker/commit/4c0158c45f3f3a0003ca4712777d211fe82d0804)
+- [Update node version and migrate to pnpm.](https://github.com/fourjuaneight/worker/commit/03e2f0adcc04c2867ef18d4d6eb94313fb1e89c9)
 
 ### Miscellaneous Tasks
 
 - [Update Changelog.](https://github.com/fourjuaneight/worker/commit/903138a6f2104536b2dfedf68a8e754e47671732)
 - [Update Changelog.](https://github.com/fourjuaneight/worker/commit/419f84fd5eebc497f6c617d36e2fd433ef5b4871)
 - [Generate changelog only on releases.](https://github.com/fourjuaneight/worker/commit/20ee6e436c674a219fec620621579c18dad35f8b)
+- [Update Changelog.](https://github.com/fourjuaneight/worker/commit/ac2ddb2da308f390967d4568394c2929d15d54f3)
 
 ## [1.0.0] - 2022-05-23
 
