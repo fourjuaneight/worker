@@ -1,3 +1,5 @@
+import { version } from '../package.json';
+
 // default responses
 const responseInit = {
   headers: {
@@ -31,7 +33,7 @@ const noAuthReqBody = {
 export const handleRequest = async (request: Request): Promise<Response> => {
   // POST requests only
   if (request.method !== 'POST') {
-    return new Response(null, {
+    return new Response(JSON.stringify({ version }), {
       status: 405,
       statusText: 'Method Not Allowed',
     });
@@ -40,7 +42,10 @@ export const handleRequest = async (request: Request): Promise<Response> => {
   // content-type check (required)
   if (!request.headers.has('content-type')) {
     return new Response(
-      JSON.stringify({ error: "Please provide 'content-type' header." }),
+      JSON.stringify({
+        error: "Please provide 'content-type' header.",
+        version,
+      }),
       badReqBody
     );
   }
@@ -56,28 +61,29 @@ export const handleRequest = async (request: Request): Promise<Response> => {
       switch (true) {
         case !payload.key:
           return new Response(
-            JSON.stringify({ error: "Missing 'key' parameter." }),
+            JSON.stringify({ error: "Missing 'key' parameter.", version }),
             noAuthReqBody
           );
         case payload.key !== AUTH_KEY:
           return new Response(
             JSON.stringify({
               error: "You're not authorized to access this API.",
+              version,
             }),
             noAuthReqBody
           );
         default: {
-          return new Response(JSON.stringify({ data }), responseInit);
+          return new Response(JSON.stringify({ data, version }), responseInit);
         }
       }
     } catch (error) {
       console.log(error);
-      return new Response(JSON.stringify({ error }), errReqBody);
+      return new Response(JSON.stringify({ error, version }), errReqBody);
     }
   }
 
   // default to bad content-type
-  return new Response(null, {
+  return new Response(JSON.stringify({ version }), {
     status: 415,
     statusText: 'Unsupported Media Type',
   });
