@@ -49,8 +49,8 @@ importers:
         specifier: ^11.2.6
         version: 11.2.6
       pnpm:
-        specifier: ^8.6.11
-        version: 8.6.11
+        specifier: ^9.15.0
+        version: 9.15.0
       prettier:
         specifier: ^2.4.1
         version: 2.7.1
@@ -1106,9 +1106,9 @@ packages:
   please-upgrade-node@3.2.0:
     resolution: {integrity: sha512-gQR3WpIgNIKwBMVLkpMUeR3e1/E1y42bqDQZfql+kDeXd8COYfM8PQA4X6y7a8u9Ua9FHmsrrmirW2vHs45hWg==}
 
-  pnpm@8.6.11:
-    resolution: {integrity: sha512-jqknppuj45tDzJsLcLqkAxytBHZXIx9JTYkGNq0/7pSRggpio9wRxTDj4NA2ilOHPlJ5BVjB5Ij5dx65woMi5A==}
-    engines: {node: '>=16.14'}
+  pnpm@9.15.0:
+    resolution: {integrity: sha512-duI3l2CkMo7EQVgVvNZije5yevN3mqpMkU45RBVsQpmSGon5djge4QfUHxLPpLZmgcqccY8GaPoIMe1MbYulbA==}
+    engines: {node: '>=18.12'}
     hasBin: true
 
   prelude-ls@1.2.1:
@@ -2416,7 +2416,7 @@ snapshots:
     dependencies:
       semver-compare: 1.0.0
 
-  pnpm@8.6.11: {}
+  pnpm@9.15.0: {}
 
   prelude-ls@1.2.1: {}
 
